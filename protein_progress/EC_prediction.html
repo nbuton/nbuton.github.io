@@ -2,6 +2,21 @@
 <h2>Protein progress</h2>
 
 <h3>EC number classification</h3>
+<h4>Description of the task</h4>
+</br>
+<h4>Image for multiple datasets<h4>
+<img src="images/EC_prediction/stats_EC40_EC50_DEEPre_ECPred.png"/>
+
+<h4>Paper to process and extract result</h4>
+<ul>
+ <li><a href="https://academic.oup.com/bioinformatics/article/36/8/2401/5698270" >UDSMProt: universal deep sequence models for protein classification </a></li>
+ <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6349967/" >mlDEEPre: Multi-Functional Enzyme Function Prediction With Hierarchical Multi-Label Deep Learning</a></li>
+ <li><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2368-y" > ECPred: a tool for the prediction of the enzymatic functions of protein sequences based on the EC nomenclature</a></li>
+ <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6030869/" > DEEPre: sequence-based enzyme EC number prediction by deep learning</a></li>
+ <li><a href="https://academic.oup.com/bioinformatics/article-abstract/36/17/4583/5843785" > </a>HECNet: a hierarchical approach to enzyme function classification using a Siamese Triplet Network </li>
+ <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9086514" > </a>The Classification of Enzymes by Deep Learning</li>
+</ul>
+
 
 <h4>On EC40 dataset</h4>
 Description of the dataset :</br>
@@ -50,7 +65,9 @@ Result on test set :</br>
 
 <h4>On DEEPre dataset</h4>
 Description of the dataset :</br>
+- similarity threshold 40%
 
+</br>
 Result on test set : </br>
  <table class="result">
   <tr>
@@ -79,6 +96,39 @@ Result on test set : </br>
 
   </tr>
 </table>
+
+
+<h4>On ECPred dataset</h4>
+Description of the dataset :</br>
+- similarity threshold 50%
+
+</br>
+Result on test set : </br>
+ <table class="result">
+  <tr>
+    <th>Model</th>
+    <th>Mean F1 on lvl0</th>
+    <th>Mean F1 on lvl1</th>
+    <th>Paper/Source</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>UDSMProt</td>
+    <td>0.98</td>
+    <td>0.95</td>
+    <td><a href="https://academic.oup.com/bioinformatics/article/36/8/2401/5698270" >UDSMProt: universal deep sequence models for protein classification </a></td>
+    <td><a href="https://github.com/nstrodt/UDSMProt">Official</a></td>
+  </tr>
+  <tr>
+    <td>ECPred</td>
+    <td>0.96</td>
+    <td>0.96</td>
+    <td><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2368-y" ></a>ECPred: a tool for the prediction of the enzymatic functions of protein sequences based on the EC nomenclature</td>
+    <td></td>
+
+  </tr>
+</table>
+
 
 <style>
 .result, th, td {
